@@ -2,6 +2,7 @@ package com.dice;
 
 import com.dice.base.BaseTest;
 import com.dice.pages.LoginPage;
+import com.dice.pages.ProfilePage;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
@@ -17,11 +18,13 @@ public class LoginTest extends BaseTest {
         loginPage.fillUpEmailAndPassword("dand6381@gmail.com","qwertye6");
 
         // push Sign in button and wait for profile page to load
-        loginPage.pushSingInButton();
-        
+        ProfilePage profilePage = loginPage.pushSingInButton();
+        profilePage.waitForProfilePageToLoad();
+
         // Verifiaction
         // - Verify title page correct - Create Profile
         // - Verify correct load page
+
 
     }
 
