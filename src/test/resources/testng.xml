@@ -1,16 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="FirstTestSuite" verbose="1" >
-    <test name="FirstTest" >
+    <test name="LoginTest" >
         <classes>
-            <class name="com.dice.FirstTest" >
-            </class>
-        </classes>
-    </test>
-
-    <test name="SecondTest" >
-        <classes>
-            <class name="com.dice.FirstTest" >
+            <class name="com.dice.LoginTest" >
+                <methods>
+                    <exclude name="positiveLoginTest"></exclude>
+                </methods>
             </class>
         </classes>
     </test>
