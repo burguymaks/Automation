@@ -1,14 +1,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="FirstTestSuite" verbose="1" >
-    <test name="LoginTest" >
+    <test name="LoginTest-CH" >
+        <parameter name="browser"  value="chrome"/>
         <classes>
             <class name="com.dice.LoginTest" >
                 <methods>
-                    <exclude name="positiveLoginTest"></exclude>
+                    <include name="positiveLoginTest"></include>
                 </methods>
             </class>
         </classes>
     </test>
+
 
 </suite>
